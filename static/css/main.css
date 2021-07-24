@@ -1,0 +1,38 @@
+body{
+    font-family: sans-serif;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+td, th{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+td{
+    min-width: 8em;
+}
+
+td a{
+    text-decoration: none;
+    color: green;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 5px;
+}
+td a:hover{
+    color: red;
+}
+
+form {
+    margin-top: 10px;
+}
+#content{
+    min-width: 20em;
+}
+
+
+
