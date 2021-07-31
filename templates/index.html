@@ -5,43 +5,87 @@
 {% endblock %}
 
 {% block body %}
-<div class="content">
-    <h1 style="text-align: center;">Task Master</h1>
-    {% if tasks|length < 1 %}
-    <h4 style="text-align: center;">There are no tasks. Create one below!</h4>
-    </h4>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="#">Task Master</a>
+    </div>
+</nav>
 
-    {% else %}
-
-    <table>
-        <tr>
-            <th>Task</th>
-            <th>Added</th>
-            <th>Actions</th>
-        </tr>
-
-        {% for task in tasks %}
-
-        <tr>
-            <td>{{ task.content }}</td>
-            <td>{{ task.date_created.date() }}</td>
-            <td>
-                <a href="/delete/{{task.id}}">Delete</a>
-                <a href="/update/{{task.id}}">Update</a>
-            </td>
-        </tr>
-
-        {% endfor %}
-
-    </table>
-    {% endif %}
-    
-
-    <form action="/" method="POST">
-        <input type="text" name="content" id="content">
-        <input type="submit" value="Add Task">
-    
-    </form>
-
+<div class="container">
+    <div class="row row-content align-items-center">
+        <div class="col-12 mt-5">
+            <div class="content">
+                {% if tasks|length < 1 %}
+                <h4 style="text-align: center;">There are no tasks. Create one below!</h4>
+                </h4>
+            
+                {% else %}
+            
+                <table class="table table-striped table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Task</th>
+                            <th>Added</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    
+            
+                    {% for task in tasks %}
+            
+                    <tr>
+                        <td>{{ task.content }}</td>
+                        <td>{{ task.date_created.date() }}</td>
+                        <td>
+                            <a class="btn btn-primary btn-sm" href="/update/{{task.id}}" role="update">Update</a>
+                            <a class="btn btn-danger btn-sm" href="/delete/{{task.id}}" role="delete">Delete</a>
+                        </td>
+                    </tr>
+            
+                    {% endfor %}
+            
+                </table>
+                {% endif %}
+                
+            
+                <form action="/" method="POST">
+                    <input type="text" name="content" id="content">
+                    <input class="btn btn-success btn-sm" type="submit" value="Add Task">
+                
+                </form>
+            
+            </div>
+            
+        </div>
+    </div>
 </div>
+
+<footer class="footer bg-dark mt-5">
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="col-12 text-center justify-content-center">
+                <h6 class="mx-auto mb-2">Developer Contact</h6>
+                <ul class="list-unstyled my-auto">
+                    <li><a href="tel:+91 9876543210"><i class="fa fa-phone"></i> Call</a></li>
+                    <li><a href="mailto:kaustubh5410@gmail.com"><i class="fa fa-envelope-o"></i> Mail</a></li>
+                    <li><a href="https://www.linkedin.com/in/kaustubh---singh"
+                            target="_blank">
+                            <i class="fa fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="https://twitter.com/kaustubhspeaks" target="_blank"><i class="fa fa-twitter"></i>
+                            Twitter</a></li>
+
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="col-12 text-center">
+                &copy;2021 Kaustubh Singh
+            </div>
+
+        </div>
+    </div>
+</footer>
 {% endblock %}
