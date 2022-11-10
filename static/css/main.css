@@ -48,5 +48,10 @@ footer hr{
     min-width: 6rem;
 }
 
+.content{
+    min-height: 300px;
+    align-items: center;
+}
+
 
 

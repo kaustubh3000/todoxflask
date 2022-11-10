@@ -55,12 +55,12 @@
                     </table>
                     {% endif %}
 
-
-                    <form action="/" method="POST">
-                        <input class="m-auto" type="text" name="content" id="content">
-                        <input class="act-btn btn btn-success btn-sm m-1" type="submit" value="Add Task">
-
-                    </form>
+                    <div class="col-6 mx-auto my-5">
+                        <form action="/" method="POST">
+                            <input type="text" name="content" id="content" placeholder="Enter task here">
+                            <input class="act-btn btn btn-success btn-sm m-1" type="submit" value="Add Task">
+                        </form>
+                    </div>
 
             </div>
 
@@ -68,34 +68,4 @@
     </div>
 </div>
 
-<footer class="footer bg-dark mt-5">
-    <div class="container">
-        <div class="row">
-
-
-            <div class="col-12 col-sm-8 text-center justify-content-center">
-                <h6 class="mx-auto mb-2">Developer Contact</h6>
-                    <ul class="list-unstyled my-auto">
-                        <li><a href="tel:+91 9876543210"></i> Call</a></li>
-                        <li><a href="mailto:kaustubh5410@gmail.com">Mail</a></li>
-                        <li><a href="https://kaustubh3000.github.io" target="_blank"> Website</a></li>
-                        <li><a href="https://www.linkedin.com/in/kaustubh---singh" target="_blank"> LinkedIn</a></li>
-                        <li><a href="https://www.github.com/kaustubh3000" target="_blank"> GitHub</a></li>
-                        <li><a href="https://twitter.com/kaustubhspeaks" target="_blank"> Twitter</a></li>
-                    </ul>
-            </div>
-
-            <div class="col-12 col-sm-4 text-center justify-content-center">
-                <a href="https://www.github.com/kaustubh3000/todoxflask" target="_blank">Project's GitHub Repo</a>
-            </div>
-            <hr>
-
-            <div class="col-12 text-center">
-                &copy;2021 <a href="https://kaustubh3000.github.io" target="_blank"> Kaustubh Singh</a>
-
-            </div>
-
-        </div>
-    </div>
-</footer>
 {% endblock %}

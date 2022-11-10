@@ -1,19 +1,35 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<title>Task Master</title>
+<title>Update Task | Task Master</title>
 {% endblock %}
 
 {% block body %}
-<div class="content">
-    <h1 style="text-align: center;">Update Task</h1>
 
+<header class="jumbotron">
+    <div class="container">
+        <div class="row row-header">
+            <div class="col-12">
+                <h1>Update Task</h1>
+            </div>
+        </div>
+    </div>
+</header>
 
-    <form action="/update/{{task.id}}" method="POST">
-        <input type="text" name="content" id="content" value="{{task.content}}">
-        <input type="submit" value="Update">
-    
-    </form>
-
+<div class="container">
+    <div class="row row-content align-items-center">
+        <div class="col-6 ml-auto mr-auto">
+            <div class="content">
+                <form action="/update/{{task.id}}" method="POST">
+                    <input type="text" name="content" id="content" value="{{task.content}}">
+                    <input class="act-btn btn btn-success btn-sm m-1" type="submit" value="Update">
+                
+                </form>
+            
+            </div>
+            
+        </div>
+    </div>
 </div>
+
 {% endblock %}
